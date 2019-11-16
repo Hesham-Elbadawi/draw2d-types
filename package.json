@@ -1,0 +1,23 @@
+{
+  "name": "draw2d-types",
+  "version": "1.0.1",
+  "description": "Typescript Definitions for draw2d touch",
+  "types": "draw2d.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hesham-Elbadawi/draw2d-types.git"
+  },
+  "keywords": [
+    "draw2d",
+    "types"
+  ],
+  "author": "Hesham Elbadawi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hesham-Elbadawi/draw2d-types/issues"
+  },
+  "homepage": "https://github.com/Hesham-Elbadawi/draw2d-types#readme"
+}

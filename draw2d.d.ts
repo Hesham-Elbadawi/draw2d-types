@@ -1,361 +1,685 @@
-declare namespace draw2d {
+// Type definitions for [draw2d]
+// Project: [http://www.draw2d.org]
+// Definitions by: Hesham Elbadawi <https://github.com/Hesham-Elbadawi/draw2d-types>
+// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
+export = Draw2D;
+declare namespace Draw2D {
     class Canvas {
         constructor(...args: any[]);
+
         add(figure: any, x: any, y: any): any;
+        add(connection: any): any;
+
         addSelection(object: any): any;
+
         calculateConnectionIntersection(): any;
+
         clear(): any;
+
         destroy(): void;
+
         fireEvent(event: any, args: any): void;
+
         fromCanvasToDocumentCoordinate(x: any, y: any): any;
+
         fromDocumentToCanvasCoordinate(x: any, y: any): any;
+
         getAbsoluteX(): any;
+
         getAbsoluteY(): any;
+
         getAllPorts(): any;
+
         getBestFigure(x: any, y: any, blacklist: any, whitelist: any): any;
+
         getBestLine(x: any, y: any, lineToIgnore: any): any;
+
         getCommandStack(): any;
+
         getDimension(): any;
+
         getDropInterceptorPolicies(): any;
+
         getFigure(id: any): any;
+
         getFigures(): any;
+
         getHeight(): any;
+
         getHtmlContainer(): any;
+
         getIntersection(line: any): any;
+
         getLine(id: any): any;
+
         getLines(): any;
+
         getPrimarySelection(): any;
+
         getScrollArea(): any;
+
         getScrollLeft(): any;
+
         getScrollTop(): any;
+
         getSelection(): any;
+
         getWidth(): any;
+
         getZoom(): any;
+
         hideDecoration(): void;
+
         init(canvasId: any, width: any, height: any): any;
+
         installEditPolicy(policy: any): any;
+
         off(eventOrFunction: any): any;
+
         on(event: any, callback: any): any;
+
         onClick(x: any, y: any, shiftKey: any, ctrlKey: any): void;
+
         onDoubleClick(x: any, y: any, shiftKey: any, ctrlKey: any): void;
+
         onDrag(draggedDomNode: any, x: any, y: any): void;
+
         onDragEnter(draggedDomNode: any): void;
+
         onDragLeave(draggedDomNode: any): void;
+
         onDrop(droppedDomNode: any, x: any, y: any, shiftKey: any, ctrlKey: any): void;
+
         onMouseWheel(wheelDelta: any, x: any, y: any, shiftKey: any, ctrlKey: any): any;
+
         onRightMouseDown(x: any, y: any, shiftKey: any, ctrlKey: any): void;
+
         registerPort(port: any): any;
+
         remove(figure: any): any;
+
         scrollTo(top: any, left: any): any;
+
         setCurrentSelection(object: any): any;
+
         setDimension(dim: any, height: any): any;
+
         setScrollArea(elementSelector: any): any;
+
         setScrollLeft(left: any): any;
+
         setScrollTop(top: any): any;
+
         setZoom(zoomFactor: any, animated: any): void;
+
         showDecoration(): void;
+
         snapToHelper(figure: any, pos: any): any;
+
         uninstallEditPolicy(policy: any): any;
+
         unregisterPort(port: any): any;
+
         static extend: any;
         static inject: any;
     }
+
     class Corona {
         constructor(...args: any[]);
+
         init(...args: any[]): any;
+
         setAlpha(...args: any[]): any;
+
         static extend: any;
         static inject: any;
     }
+
     class Figure {
         constructor(...args: any[]);
+
         add(child: any, locator: any, index: any): any;
+
         addCssClass(className: any): any;
+
         applyTransformation(): any;
+
         attr(name: any, value: any): any;
+
         clone(cloneMetaData: any): any;
+
         contains(containedFigure: any): any;
+
         createCommand(request: any): any;
+
         createShapeElement(): void;
+
         delegateTarget(draggedFigure: any): any;
+
         fireEvent(event: any, args: any): void;
+
         getAbsoluteBounds(): any;
+
         getAbsolutePosition(): any;
+
         getAbsoluteX(): any;
+
         getAbsoluteY(): any;
+
         getAlpha(): any;
+
         getBestChild(x: any, y: any, figureToIgnore: any): any;
+
         getBoundingBox(): any;
+
         getCanSnapToHelper(): any;
+
         getCanvas(): any;
+
         getChildren(): any;
+
         getComposite(): any;
+
         getCssClass(): any;
+
         getHandleBBox(): any;
+
         getHeight(): any;
+
         getId(): any;
+
         getKeepAspectRatio(): any;
+
         getMinHeight(): any;
+
         getMinWidth(): any;
+
         getParent(): any;
+
         getPersistentAttributes(): any;
+
         getPosition(): any;
+
         getRoot(): any;
+
         getRotationAngle(): any;
+
         getSelectionAdapter(): any;
+
         getShapeElement(): any;
+
         getSnapToGridAnchor(): any;
+
         getTopLevelShapeElement(): any;
+
         getUserData(): any;
+
         getWidth(): any;
+
         getX(): any;
+
         getY(): any;
+
         getZOrder(): any;
+
         hasCssClass(className: any): any;
+
         hitTest(iX: any, iY: any, corona: any): any;
+
         init(attr: any, setter: any, getter: any): any;
+
         installEditPolicy(policy: any): any;
+
         isDeleteable(): any;
+
         isDraggable(): any;
+
         isResizeable(): any;
+
         isSelectable(): any;
+
         isSelected(): any;
+
         isStrechable(): any;
+
         isVisible(): any;
+
         off(eventOrFunction: any): any;
+
         on(event: any, callback: any, context: any): any;
+
         onCatch(droppedFigure: any, x: any, y: any, shiftKey: any, ctrlKey: any): void;
+
         onClick(): void;
+
         onContextMenu(x: any, y: any): void;
+
         onDoubleClick(): void;
+
         onDrag(dx: any, dy: any, dx2: any, dy2: any, shiftKey: any, ctrlKey: any): void;
+
         onDragEnd(x: any, y: any, shiftKey: any, ctrlKey: any): void;
+
         onDragEnter(draggedFigure: any): void;
+
         onDragLeave(draggedFigure: any): void;
+
         onDragStart(x: any, y: any, shiftKey: any, ctrlKey: any): any;
+
         onDrop(dropTarget: any, x: any, y: any, shiftKey: any, ctrlKey: any): void;
+
         onMouseEnter(): void;
+
         onMouseLeave(): void;
+
         onPanning(dx: any, dy: any, dx2: any, dy2: any, shiftKey: any, ctrlKey: any): void;
+
         onPanningEnd(): void;
+
         onTimer(): void;
+
         pick(obj: any, var_keys: any, ...args: any[]): any;
+
         remove(child: any): any;
+
         removeCssClass(className: any): any;
+
         repaint(attributes: any): any;
+
         resetChildren(): any;
+
         select(asPrimarySelection: any): any;
+
         setAlpha(percent: any): any;
+
         setBoundingBox(rect: any): any;
+
         setCanSnapToHelper(flag: any): any;
+
         setCanvas(canvas: any): any;
+
         setComposite(composite: any): any;
+
         setCssClass(cssClass: any): any;
+
         setDeleteable(flag: any): any;
+
         setDimension(w: any, h: any): any;
+
         setDraggable(flag: any): any;
+
         setGlow(flag: any): any;
+
         setHeight(height: any): any;
+
         setId(newId: any): any;
+
         setKeepAspectRatio(flag: any): any;
+
         setMinHeight(h: any): any;
+
         setMinWidth(w: any): any;
+
         setParent(parent: any): any;
+
         setPersistentAttributes(memento: any): any;
+
         setPosition(x: any, y: any): any;
+
         setResizeable(flag: any): any;
+
         setRotationAngle(angle: any): any;
+
         setSelectable(flag: any): any;
+
         setSelectionAdapter(adapter: any): any;
+
         setSnapToGridAnchor(point: any): any;
+
         setUserData(object: any): any;
+
         setVisible(flag: any, duration: any): any;
+
         setWidth(width: any): any;
+
         setX(x: any): any;
+
         setY(y: any): any;
+
         startTimer(milliSeconds: any): any;
+
         stopTimer(): any;
+
         toBack(figure: any): any;
+
         toFront(figure: any): any;
+
         toggleCssClass(className: any): any;
+
         translate(dx: any, dy: any): any;
+
         uninstallEditPolicy(policy: any): any;
+
         unselect(): any;
+
         static extend: any;
         static inject: any;
     }
+
     class HeadlessCanvas {
         constructor(...args: any[]);
+
         add(figure: any, x: any, y: any): any;
+
         calculateConnectionIntersection(): void;
+
         clear(): any;
+
         fireEvent(event: any, args: any): void;
+
         getAllPorts(): any;
+
         getCommandStack(): any;
+
         getFigure(id: any): any;
+
         getFigures(): any;
+
         getLine(id: any): any;
+
         getLines(): any;
+
         hideDecoration(): void;
+
         init(): void;
+
         off(eventOrFunction: any): any;
+
         on(event: any, callback: any): any;
+
         registerPort(port: any): any;
+
         showDecoration(): void;
+
         static extend: any;
         static inject: any;
     }
+
     class HybridPort {
         constructor(...args: any[]);
+
         createCommand(...args: any[]): any;
+
         init(...args: any[]): any;
+
         static extend: any;
         static inject: any;
     }
+
     class InputPort {
         constructor(...args: any[]);
+
         createCommand(...args: any[]): any;
+
         init(...args: any[]): any;
+
         static extend: any;
         static inject: any;
     }
+
     class OutputPort {
         constructor(...args: any[]);
+
         createCommand(...args: any[]): any;
+
         init(...args: any[]): any;
+
         static extend: any;
         static inject: any;
     }
+
     class Port {
         constructor(...args: any[]);
+
         createCommand(request: any): any;
+
         fireEvent(...args: any[]): any;
+
         getConnectionAnchorLocation(referencePoint: any, inquiringConnection: any): any;
+
         getConnectionAnchorReferencePoint(inquiringConnection: any): any;
+
         getConnectionDirection(peerPort: any): any;
+
         getConnections(): any;
+
         getCoronaWidth(): any;
+
         getLocator(): any;
+
         getMaxFanOut(): any;
+
         getName(): any;
+
         getPersistentAttributes(...args: any[]): any;
+
         getSelectionAdapter(): any;
+
         getValue(): any;
+
         hitTest(iX: any, iY: any, corona: any): any;
+
         init(...args: any[]): any;
+
         onConnect(connection: any): void;
+
         onDisconnect(connection: any): void;
+
         onDrag(...args: any[]): any;
+
         onDragEnd(x: any, y: any, shiftKey: any, ctrlKey: any): void;
+
         onDragStart(x: any, y: any, shiftKey: any, ctrlKey: any): any;
+
         onDrop(dropTarget: any, x: any, y: any, shiftKey: any, ctrlKey: any): void;
+
         onMouseEnter(): void;
+
         onMouseLeave(): void;
+
         repaint(...args: any[]): any;
+
         setBackgroundColor(...args: any[]): any;
+
         setConnectionAnchor(anchor: any): any;
+
         setConnectionDirection(direction: any): any;
+
         setCoronaWidth(width: any): void;
+
         setGlow(flag: any): any;
+
         setLocator(locator: any): any;
+
         setMaxFanOut(count: any): any;
+
         setName(name: any): void;
+
         setParent(...args: any[]): any;
+
         setPersistentAttributes(...args: any[]): any;
+
         setValue(value: any): any;
+
         static extend: any;
         static inject: any;
     }
+
     class ResizeHandle {
         constructor(...args: any[]);
+
         createShapeElement(...args: any[]): any;
+
         fireEvent(event: any, args: any): void;
+
         getOwner(): any;
+
         getSnapToDirection(): any;
+
         getType(): any;
+
         hide(): any;
+
         init(...args: any[]): any;
+
         onDrag(...args: any[]): any;
+
         onDragEnd(x: any, y: any, shiftKey: any, ctrlKey: any): void;
+
         onDragStart(x: any, y: any, shiftKey: any, ctrlKey: any): any;
+
         onKeyDown(keyCode: any, ctrl: any): void;
+
         repaint(...args: any[]): any;
+
         setBackgroundColor(...args: any[]): any;
+
         setCanvas(...args: any[]): any;
+
         setDimension(...args: any[]): any;
+
         setDraggable(...args: any[]): any;
+
         setOwner(owner: any): any;
+
         setPosition(x: any, y: any): any;
+
         setType(type: any): any;
+
         show(canvas: any): any;
+
         supportsSnapToHelper(): any;
+
         updateCursor(shape: any): any;
+
         static extend: any;
         static inject: any;
     }
+
     class SVGFigure {
         constructor(...args: any[]);
+
         createSet(): any;
+
         getSVG(): any;
+
         importSVG(canvas: any, rawSVG: any): any;
+
         init(...args: any[]): any;
+
         setPersistentAttributes(...args: any[]): any;
+
         setSVG(svg: any, duration: any): any;
+
         static extend: any;
         static inject: any;
     }
+
     class Selection {
         constructor(...args: any[]);
+
         add(figure: any): any;
+
         clear(): any;
+
         contains(figure: any, checkDescendant: any): any;
+
         each(func: any, reverse: any): any;
+
         getAll(expand: any): any;
+
         getPrimary(): any;
+
         getSize(): any;
+
         init(): void;
+
         remove(figure: any): any;
+
         setPrimary(figure: any): any;
+
         static extend: any;
         static inject: any;
     }
+
     class SetFigure {
         constructor(...args: any[]);
+
         applyAlpha(): void;
+
         applyTransformation(): any;
+
         createSet(): any;
+
         createShapeElement(): any;
+
         getTopLevelShapeElement(): any;
+
         init(...args: any[]): any;
+
         repaint(...args: any[]): any;
+
         setCanvas(...args: any[]): any;
+
         setCssClass(...args: any[]): any;
+
         setVisible(...args: any[]): any;
+
         toBack(figure: any): any;
+
         toFront(figure: any): any;
+
         static extend: any;
         static inject: any;
     }
+
     class VectorFigure {
         constructor(...args: any[]);
+
         getBackgroundColor(): any;
+
         getColor(): any;
+
         getDashArray(): any;
+
         getPersistentAttributes(...args: any[]): any;
+
         getRadius(): any;
+
         getStroke(): any;
+
         init(...args: any[]): any;
+
         repaint(...args: any[]): any;
+
         setBackgroundColor(color: any): any;
+
         setColor(color: any): any;
+
         setDashArray(dashPattern: any): any;
+
         setGlow(flag: any): any;
+
         setPersistentAttributes(...args: any[]): any;
+
         setRadius(radius: any): any;
+
         setStroke(w: any): any;
+
         static extend: any;
         static inject: any;
     }
+
     const Configuration: {
         factory: {
             createConnection: any;
@@ -772,8 +1096,7 @@ declare namespace draw2d {
             Widget: any;
         };
     };
-    const storage: {
-    };
+    const storage: {};
     namespace command {
         // Too-deep object hierarchy from draw2d.Connection.DROP_FILTER.draw2d.command
         const Command: any;
